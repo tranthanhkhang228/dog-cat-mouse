@@ -1,4 +1,15 @@
-let say = () => console.log('Meow Meow!');
-let eat = () => console.log('Eat one fish.');
+class Cat{
+    constructor(stomach){
+        this.stomach = stomach;
+    }
 
-module.exports = say;
+    say(){
+        console.log('Meow Meow!');
+    }
+
+    eat(mouse) {
+        this.stomach.push(mouse);
+    }
+}
+
+module.exports = Cat;
