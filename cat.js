@@ -1,9 +1,10 @@
-class Cat{
-    constructor(stomach){
-        this.stomach = stomach;
+module.exports = class Cat {
+    constructor(name) {
+        this.name = name;
+        this.stomach = [];
     }
 
-    say(){
+    say() {
         console.log('Meow Meow!');
     }
 
@@ -11,5 +12,3 @@ class Cat{
         this.stomach.push(mouse);
     }
 }
-
-module.exports = Cat;

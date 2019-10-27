@@ -1,11 +1,16 @@
-class Dog{
-    constructor(stomach){
-        this.stomach = stomach;
+let chalk = require('chalk')
+
+module.exports = class Dog {
+    constructor(name) {
+        this.name = name;
+        this.stomach = [];
     }
 
-    eat(cat){
+    eat(cat) {
         this.stomach.push(cat);
     }
-}
 
-module.exports = Dog;
+    say() {
+        console.log(`I'm ${chalk.red(this.name)}`);
+    }
+}
