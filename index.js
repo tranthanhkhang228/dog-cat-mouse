@@ -5,5 +5,6 @@ let jack = new Dog('jack');
 let tom = new Cat('tom');
 
 jack.say();
+tom.say();
 // jack.eat(tom);
 // console.log(jack);
