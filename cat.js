@@ -1,3 +1,5 @@
+let Mouse = require('./Mouse');
+
 module.exports = class Cat {
     constructor(name) {
         this.name = name;
@@ -8,7 +10,10 @@ module.exports = class Cat {
         console.log('Meow Meow!');
     }
 
-    eat(mouse) {
-        this.stomach.push(mouse);
+    eat(animal) {
+        if (animal instanceof Mouse)
+            this.stomach.push(animal);
+        else
+            throw new Error('Cat only eat mouse!');
     }
 }
